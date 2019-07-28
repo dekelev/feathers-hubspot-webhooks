@@ -1,0 +1,70 @@
+{
+  "name": "feathers-hubspot-webhooks",
+  "version": "1.0.0",
+  "description": "Handle HubSpot webhooks in a FeathersJS service",
+  "main": "./lib",
+  "files": [
+    "lib"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "compile": "rm -rf lib/ && $(npm bin)/babel -d lib/ src/",
+    "prepublish": "npm run compile",
+    "watch": "$(npm bin)/npm-watch",
+    "lint": "$(npm bin)/eslint src/ test/ || true",
+    "tape": "$(npm bin)/babel-tape-runner test/ | $(npm bin)/tap-spec || true",
+    "test": "npm run lint && npm run tape"
+  },
+  "watch": {
+    "test": {
+      "patterns": [
+        "src/**/*.js",
+        "test/**/*.js"
+      ],
+      "quiet": true
+    }
+  },
+  "homepage": "https://github.com/dekelev/feathers-hubspot-webhooks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dekelev/feathers-hubspot-webhooks.git"
+  },
+  "keywords": [
+    "feathers",
+    "hubspot",
+    "webhooks"
+  ],
+  "author": {
+    "name": "Dekel Barzilay",
+    "email": "dekelev@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dekelev/feathers-hubspot-webhooks/issues"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "debug": "^4.1.1"
+  },
+  "peerDependencies": {
+    "feathers": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-tape-runner": "^2.0.1",
+    "eslint": "^6.1.0",
+    "npm-watch": "^0.6.0",
+    "sinon": "^1.17.5",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0",
+    "tape-async": "^2.1.1"
+  }
+}
