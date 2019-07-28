@@ -64,6 +64,9 @@ module.exports = {
     },
     updated: {
       async firstname({ object, event, params, app }) {
+        // Get HubSpot object ID from `object.objectId`
+        // Get updated value from `object.propertyValue`
+
         return {};
       },
       //....
