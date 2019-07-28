@@ -32,6 +32,9 @@ export default function createService(handlers) {
     },
 
     create(event, params) {
+      if (Array.isArray(event))
+        return Promise.all(event.map(current => this.create(current)));
+
       const handler = getHandler(handlers, event);
 
       if (!handler) {

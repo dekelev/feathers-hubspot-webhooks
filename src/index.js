@@ -36,7 +36,7 @@ export function hubspotSignatureValidationMiddleware(route, endpointSecret) {
       }
 
       try {
-        req.body = JSON.parse(body)[0];
+        req.body = JSON.parse(body);
       } catch (err) {
         res.status(400).end();
         return;
