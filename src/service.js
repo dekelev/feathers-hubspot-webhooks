@@ -39,7 +39,7 @@ export default function createService(handlers) {
         return Promise.resolve({});
       }
 
-      return handler({ object: event, event, params, app: this.app });
+      return handler({ event, params, app: this.app });
     },
   };
 }

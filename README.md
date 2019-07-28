@@ -53,7 +53,7 @@ module.exports = function (app) {
 // hubspot-webhooks.handlers.js
 module.exports = {
   contact: {
-    async created({ object, event, params, app }) {
+    async created({ event, params, app }) {
       // Handle webhook
       // NOTE: Whatever you return will be returned as a response to hubspot.
       // If you return undefined feathers will 404 and the hook will fail
@@ -63,43 +63,43 @@ module.exports = {
       return {};
     },
     updated: {
-      async firstname({ object, event, params, app }) {
-        // Get HubSpot object ID from `object.objectId`
-        // Get updated value from `object.propertyValue`
+      async firstname({ event, params, app }) {
+        // Get HubSpot object ID from `event.objectId`
+        // Get updated value from `event.propertyValue`
 
         return {};
       },
       //....
     },
-    async deleted({ object, event, params, app }) {
+    async deleted({ event, params, app }) {
       return {};
     },
   },
   company: {
-    async created({ object, event, params, app }) {
+    async created({ event, params, app }) {
       return {};
     },
     updated: {
-      async city({ object, event, params, app }) {
+      async city({ event, params, app }) {
         return {};
       },
       //....
     },
-    async deleted({ object, event, params, app }) {
+    async deleted({ event, params, app }) {
       return {};
     },
   },
   deal: {
-    async created({ object, event, params, app }) {
+    async created({ event, params, app }) {
       return {};
     },
     updated: {
-      async amount({ object, event, params, app }) {
+      async amount({ event, params, app }) {
         return {};
       },
       //....
     },
-    async deleted({ object, event, params, app }) {
+    async deleted({ event, params, app }) {
       return {};
     },
   },
