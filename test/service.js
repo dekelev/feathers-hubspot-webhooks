@@ -28,7 +28,7 @@ module.exports = function(test) {
 
     t.equals(result, 'the result', 'Returns the result of the handler');
 
-    handlers.contact.created.reset();
+    handlers.contact.created.resetHistory();
     result = yield service.create({ eventId: 'evt_123', subscriptionType: 'contact.deletion' });
     t.deepEquals(result, {}, 'Returns success on unhandled event types');
 
