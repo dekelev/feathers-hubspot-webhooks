@@ -45,7 +45,7 @@
     "url": "https://github.com/dekelev/feathers-hubspot-webhooks/issues"
   },
   "engines": {
-    "node": ">= 10"
+    "node": ">= 14"
   },
   "dependencies": {
     "body-parser": "^1.19.1",
@@ -76,7 +76,7 @@
         "@babel/preset-env",
         {
           "targets": {
-            "node": "8"
+            "node": "14"
           }
         }
       ]
